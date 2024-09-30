@@ -1,6 +1,8 @@
 # Indirect-Syscall-Shellcode-Executon-via-Powershell
 meh why not do malicious shit not detected by amsi
 
+small explanation
+any exe can be turned into shellcode meaning you can hardcode a exe into this and run malicious code undetected by any antivirus
 
 
 
