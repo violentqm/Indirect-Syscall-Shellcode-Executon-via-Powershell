@@ -19,6 +19,9 @@ ill make it adaptive so like it doesnt get fucked when your dumbass swaps out th
 
 # Answering questions
 🤓: erm this will get detected by defender when loaded into memory
+
 Obfuscate it same goes for the 2 antivirus that actually properly scan powershell code
+-------
 🤓: erm but it will get detected by memory scans
+
 this is beta code ill so dll unhooking using powershell soon for self injection code
